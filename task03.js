@@ -1,14 +1,9 @@
 'use strict';
 
 const addPrefix = (names, prefix) => {
-  let prefixNames
-  for (let i = 0; i < names.length; i++) {
-    prefixNames = prefix + names[i];
+  const prefixNames = names.map(item => (`${prefix} ${item}`)).join(', ');
 
-    return prefixNames;
-  };
-}
+  return prefixNames;
+};
 
-
-
-console.log(`Результат функции: ${addPrefix(['Noah', 'Liam', 'Mason', 'Jacob', 'Robot', 'William', 'Ethan', 'Michael', 'Alexander'], 'Mr ')}`);
+console.log(`Результат функции: ${addPrefix(['Noah', 'Liam', 'Mason', 'Jacob', 'Robot', 'William', 'Ethan', 'Michael', 'Alexander'], 'Mr')}`);
