@@ -1,7 +1,7 @@
 'use strict';
 
 const addPrefix = (names, prefix) => {
-  const prefixNames = names.map(item => (`${prefix} ${item}`)).join(', ');
+  const prefixNames = names.map(item => (`'${prefix} ${item}'`)).join(', ');
 
   return prefixNames;
 };
